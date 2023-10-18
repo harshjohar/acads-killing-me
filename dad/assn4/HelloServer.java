@@ -25,7 +25,7 @@ public class HelloServer extends UnicastRemoteObject implements HelloWorld {
 	}
 
 	public String hello() throws RemoteException {
-		System.out.println("Executando hello()");
+		System.out.println("Remote called hello()");
 		return "Hello!!!";
 	}
 
