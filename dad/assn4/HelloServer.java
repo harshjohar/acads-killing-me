@@ -18,6 +18,7 @@ public class HelloServer extends UnicastRemoteObject implements HelloWorld {
 		try {
 			LocateRegistry.createRegistry(1515);
 			HelloServer obj = new HelloServer();
+			System.out.println("Server started");
 			Naming.rebind("rmi://127.0.0.1:1515/HelloWorld", obj);
 		} catch (Exception ex) {
 			System.out.println("Exception: " + ex.getMessage());

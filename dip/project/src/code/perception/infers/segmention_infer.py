@@ -1,8 +1,5 @@
 # -- coding: utf-8 --
-"""
-Copyright (c) 2018. All rights reserved.
-Created by Resnick Xing on 2018/5/11
-"""
+
 import glob,cv2,numpy as np
 import matplotlib.pyplot as plt
 from keras.models import model_from_json

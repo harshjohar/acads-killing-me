@@ -8,10 +8,6 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.HashMap;
 
-/**
- * Implementation of the Bully Election Algorithm 
- * @author Shweta Yakkali
- */
 public class BullyAlgo implements Runnable{
     static int leader_id=-1;
     static int self_id=-1;

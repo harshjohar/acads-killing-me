@@ -1,11 +1,16 @@
 # 1st_manual/21_manual1.gif, images/21_training.tif
 datasetPath=/Users/harshjohar/Desktop/acads/dip/project/datasets/training
+# datasetPath=../../datasets/training
 # groundtruth/21_manual.gif, origin/21_training.tif
 trainPath=/Users/harshjohar/Desktop/acads/dip/project/datasets/training
+# trainPath=../../datasets/training
 # groundtruh, origin format same as trainPath
+# validatePath=../../datasets/validate
 validatePath=/Users/harshjohar/Desktop/acads/dip/project/datasets/validate
 # groundtruth, origin format same as trainPath
+# testPath=../../test
 testPath=/Users/harshjohar/Desktop/acads/dip/project/test
+# resultPath=../../results
 resultPath=/Users/harshjohar/Desktop/acads/dip/project/results
 
 testArr=( 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 )

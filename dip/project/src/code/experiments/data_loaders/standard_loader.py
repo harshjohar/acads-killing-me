@@ -1,7 +1,4 @@
-"""
-Copyright (c) 2018. All rights reserved.
-Created by Resnick Xing on 2018/5/10
-"""
+
 import glob,cv2,numpy as np
 import matplotlib.pyplot as plt
 from perception.bases.data_loader_base import DataLoaderBase

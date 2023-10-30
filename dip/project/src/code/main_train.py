@@ -1,9 +1,4 @@
 
-"""
-Copyright (c) 2018. All rights reserved.
-Created by Resnick Xing on 2018/5/10
-
-"""
 import os
 from experiments.data_loaders.standard_loader import DataLoader
 # from infers.simple_mnist_infer import SimpleMnistInfer

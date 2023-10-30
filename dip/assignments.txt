@@ -1,0 +1,7 @@
+1. dip tools
+2. RGB alag alag
+3. image histogram
+4. arthematic operations on images
+5. filters gaussian, average, bilateral, median
+6. Laplacian filters and unsharp masking
+7. compression using LZW technique, real time - vertical and horizontal
