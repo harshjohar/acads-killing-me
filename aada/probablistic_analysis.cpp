@@ -1,43 +1,28 @@
-#include <iostream>
+#include "bits/stdc++.h"
 using namespace std;
 
-double calculateOverallSuccessProbability(double probability,
-                                          double successRate,
-                                          double failureRate) {
-  return probability * successRate + (1 - probability) * (1 - failureRate);
-}
+class Person {
+public:
+  double prob, underperform_prob, success_prob, failure_prob;
+  Person(double p = 0, double up = 0, double sp = 0, double fp = 0)
+      : prob(p), underperform_prob(up), success_prob(sp), failure_prob(fp) {}
+
+  double successProbability() {
+    return prob * success_prob + (1 - prob) * (1 - failure_prob);
+  }
+};
 
 int main() {
-  double probabilityAlice = 0.7;
-  double probabilityUnderperformAlice = 1 - probabilityAlice;
-  double successRateAlice = 0.9;
-  double failureRateUnderperformAlice = 0.6;
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
 
-  double probabilityBob = 0.8;
-  double probabilityExceedBob = 1 - probabilityBob;
-  double successRateBob = 0.8;
-  double failureRateExceedBob = 0.95;
+  Person alice(0.7, 0.3, 0.9, 0.6);
+  Person bob(0.8, 0.2, 0.8, 0.95);
 
-  double overallSuccessProbabilityAlice = calculateOverallSuccessProbability(
-      probabilityAlice, successRateAlice, failureRateUnderperformAlice);
-  double overallSuccessProbabilityBob = calculateOverallSuccessProbability(
-      probabilityBob, successRateBob, failureRateExceedBob);
-
-  // Output the results
-  cout << "Overall Success Probability for Alice: "
-       << overallSuccessProbabilityAlice << endl;
-  cout << "Overall Success Probability for Bob: "
-       << overallSuccessProbabilityBob << endl;
-
-  if (overallSuccessProbabilityAlice > overallSuccessProbabilityBob) {
-    cout << "Select Alice for the critical project." << endl;
-  } else if (overallSuccessProbabilityAlice < overallSuccessProbabilityBob) {
-    cout << "Select Bob for the critical project." << endl;
-  } else {
-    cout << "Both candidates have equal overall success probabilities. "
-            "Consider other factors for the decision."
-         << endl;
-  }
-
-  return 0;
+  if (alice.successProbability() > bob.successProbability())
+    cout << "Alice\n";
+  else if (alice.successProbability() < bob.successProbability())
+    cout << "Bob\n";
+  else
+    cout << "Both candidate have same probability\n";
 }
